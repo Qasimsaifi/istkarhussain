@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Applied custom theme: Dark Brown, Light Wood, Cream, Charcoal, White */
+  --background: #FFF8F0; /* Cream */
+  --foreground: #1C1A17; /* Charcoal */
+  --card: #FFFFFF; /* White */
+  --card-foreground: #1C1A17; /* Charcoal */
+  --popover: #FFFFFF; /* White */
+  --popover-foreground: #1C1A17; /* Charcoal */
+  --primary: #4A2E18; /* Dark Brown */
+  --primary-foreground: #FFFFFF; /* White */
+  --secondary: #D7B894; /* Light Wood */
+  --secondary-foreground: #1C1A17; /* Charcoal */
+  --muted: #F5EEE6; /* Light Cream */
+  --muted-foreground: #8B7355; /* Muted Brown */
+  --accent: #4A2E18; /* Dark Brown */
+  --accent-foreground: #FFFFFF; /* White */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8DDD0; /* Soft Cream-Brown */
+  --input: #FFFFFF; /* White */
+  --ring: #4A2E18; /* Dark Brown */
+  --chart-1: #4A2E18; /* Dark Brown */
+  --chart-2: #D7B894; /* Light Wood */
+  --chart-3: #8B7355; /* Muted Brown */
+  --chart-4: #D4A574; /* Warm Tan */
+  --chart-5: #6B4423; /* Deep Brown */
+  --radius: 0.625rem;
+  --sidebar: #FFF8F0; /* Cream */
+  --sidebar-foreground: #1C1A17; /* Charcoal */
+  --sidebar-primary: #4A2E18; /* Dark Brown */
+  --sidebar-primary-foreground: #FFFFFF; /* White */
+  --sidebar-accent: #D7B894; /* Light Wood */
+  --sidebar-accent-foreground: #1C1A17; /* Charcoal */
+  --sidebar-border: #E8DDD0; /* Soft Cream-Brown */
+  --sidebar-ring: #4A2E18; /* Dark Brown */
+}
+
+.dark {
+  --background: #1C1A17; /* Charcoal */
+  --foreground: #FFF8F0; /* Cream */
+  --card: #2A2420; /* Dark Charcoal */
+  --card-foreground: #FFF8F0; /* Cream */
+  --popover: #2A2420; /* Dark Charcoal */
+  --popover-foreground: #FFF8F0; /* Cream */
+  --primary: #D7B894; /* Light Wood */
+  --primary-foreground: #1C1A17; /* Charcoal */
+  --secondary: #4A2E18; /* Dark Brown */
+  --secondary-foreground: #FFF8F0; /* Cream */
+  --muted: #3A3530; /* Dark Muted */
+  --muted-foreground: #B8A89A; /* Light Muted */
+  --accent: #D7B894; /* Light Wood */
+  --accent-foreground: #1C1A17; /* Charcoal */
+  --destructive: #EF4444;
+  --destructive-foreground: #1C1A17; /* Charcoal */
+  --border: #3A3530; /* Dark Border */
+  --input: #2A2420; /* Dark Charcoal */
+  --ring: #D7B894; /* Light Wood */
+  --chart-1: #D7B894; /* Light Wood */
+  --chart-2: #4A2E18; /* Dark Brown */
+  --chart-3: #B8A89A; /* Light Muted */
+  --chart-4: #8B7355; /* Muted Brown */
+  --chart-5: #E8D7C3; /* Light Tan */
+  --sidebar: #1C1A17; /* Charcoal */
+  --sidebar-foreground: #FFF8F0; /* Cream */
+  --sidebar-primary: #D7B894; /* Light Wood */
+  --sidebar-primary-foreground: #1C1A17; /* Charcoal */
+  --sidebar-accent: #4A2E18; /* Dark Brown */
+  --sidebar-accent-foreground: #FFF8F0; /* Cream */
+  --sidebar-border: #3A3530; /* Dark Border */
+  --sidebar-ring: #D7B894; /* Light Wood */
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
