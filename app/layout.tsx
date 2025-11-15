@@ -8,40 +8,40 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Istkar Hussain | Interior Design & Carpentry',
-  description: 'Premium interior design and custom carpentry services. Transform your spaces with elegant, functional design solutions.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+    title: 'Istkar Hussain | Interior Design & Carpentry',
+    description: 'Premium interior design and custom carpentry services. Transform your spaces with elegant, functional design solutions.',
+    generator: 'v0.app',
+    icons: {
+        icon: [
+            {
+                url: 'portrait-designer-istkar.jpg',
+                media: '(prefers-color-scheme: light)',
+            },
+            {
+                url: 'portrait-designer-istkar.jpg',
+                media: '(prefers-color-scheme: dark)',
+            },
+            {
+                url: 'portrait-designer-istkar.jpg',
+                type: 'image/svg+xml',
+            },
+        ],
+        apple: 'portrait-designer-istkar.jpg',
+    },
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
-        <FloatingContact />
-        {children}
-        <Analytics />
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <body className={`font-sans antialiased`}>
+                <FloatingContact />
+                {children}
+                <Analytics />
+            </body>
+        </html>
+    )
 }
